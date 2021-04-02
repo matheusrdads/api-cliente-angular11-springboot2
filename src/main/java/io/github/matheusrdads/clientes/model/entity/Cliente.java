@@ -21,7 +21,7 @@ public class Cliente {
     @Column(nullable = false, length = 11)
     private String cpf;
 
-    @Column(name = "data_cadastro")
+    @Column(name = "data_cadastro", updatable = false)  //updatable = false: quando receber uma requisição put dataCadastro não será  atualizada
     @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate dataCadastro;
 
